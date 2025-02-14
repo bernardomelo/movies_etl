@@ -3,37 +3,6 @@
 # Overview
 The Movie ETL project is an Extract, Transform, and Load (ETL) pipeline for movie data. It extracts data from the OMDb API, processes and transforms the data, and loads it into a database.
 
-# Project Structure
-etl_challenge/
-│── movie_etl/                     # Main Django project folder
-│   ├── etl/                        # ETL pipeline logic
-│   │   ├── extractors/              # Data extraction modules
-│   │   │   ├── omdb.py              # Extracts movie data from OMDb API
-│   │   ├── loaders/                 # Data loading modules
-│   │   │   ├── movie_loader.py      # Loads data into the database
-│   │   ├── transformers/            # Data transformation modules
-│   │   │   ├── movie_transformer.py # Processes and normalizes movie data
-│   │   ├── tasks/                    # Celery tasks for ETL jobs
-│   │   │   ├── etl_tasks.py         # High-level ETL task orchestration
-│   │   │   ├── extractor_tasks.py   # Handles extraction jobs
-│   │   │   ├── transform_tasks.py   # Handles transformation jobs
-│   │   │   ├── load_tasks.py        # Handles loading jobs
-│   ├── management/                  # Django management commands
-│   │   ├── commands/
-│   │   │   ├── run_etl.py           # CLI command to run ETL
-│   ├── models/                      # Django models for database
-│   ├── migrations/                   # Database migrations
-│   ├── movie_etl/                   # Django project configuration
-│   │   ├── settings.py               # Django settings
-│   │   ├── urls.py                   # Django URL routing
-│   │   ├── views.py                  # Django views (if applicable)
-│   │   ├── admin.py                  # Django admin configurations
-│   ├── db.sqlite3                    # SQLite database
-│   ├── manage.py                      # Django management script
-│   ├── requirements.txt               # Python dependencies
-│── venv/                              # Virtual environment (ignored in production)
-│── movie_etl.rar                      # Compressed archive of the project
-
 # Installation
 Prerequisites
 Python 3.x
